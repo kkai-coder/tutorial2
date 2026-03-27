@@ -1,9 +1,49 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Hello, World</title>
-</head>
-<body>
-    <h1>Hello, World!</h1>
-</body>
-</html>
+
+decision = input("Welcome to Seeds Marketplace, would you like to hear the specials for today? ")
+
+if decision.lower() == "yes":
+    order=input("Today we have our Salmon Bowl, Chicken Teriyaki Bowl, Chicken Tenders, and Caesar Salad which would you like?")
+    if order.lower() == "salmon bowl":
+        toppings = input("Awesome! Our bowl comes with three different types of rice. We have white rice, brown rice or sushi rice. Which would you prefer?")
+        if toppings.lower() == "white rice":
+            print("Wow kinda basic but okay. One salmon bowl with white rice coming up.")
+        elif toppings.lower() == "brown rice":
+            print("Okay healthy! Your waist is gonna be snatched after this. One salmon bowl with brown rice coming up.")
+        elif toppings.lower() == "sushi rice":
+            print("omg kore wa nihon desu ka?? One salmon bowl with sushi rice coming up.")
+        else:
+            print("Um so that wasn't any of the options...")
+    elif order.lower() == "chicken teriyaki bowl":
+        toppings = input("Sounds great! You can this item with a side of Daikon, Kimchee or Miso Soup, which would you like?")
+        if toppings.lower() == "daikon":
+            print("Great choice! I love Daikon. One chicken teriyaki bowl with a side of daikon coming right up!.")
+        elif toppings.lower() == "kimchee":
+            print("Sounds good!Just a warning though our kimchee is pretty spicy. One chicken teriyaki bowl with a side of kimchee coming up!")
+        elif toppings.lower() == "miso soup":
+            print("OMG I LOVE MISO SOUP AJNJANWDNOQWNDOAN. One chicken teriyaki bowl with a side of kimchee coming up!")
+        else:
+            print("I dont think you were listening to me")
+    elif order.lower() == "chicken tenders":
+        toppings = int(input("How many chicken tenders would you like? You can get an order of 2, 3 or 4"))
+        if int(toppings) <= 2:
+            print("Okay, sounds good! One order of two chicken tenders coming up!")
+        elif int(toppings) == 3:
+            print("Three is kinda alot but sure its your health not mine. One order of three chicken tenders coming up!")
+        elif int(toppings) == 4:
+            print("Now that is some big back activity. One order of four chicken tenders coming right up!")
+        else:
+            print("Okay so actually that is not an option")
+    elif order.lower() == "caesar salad":
+        toppings = input("You can pick one of three proteins with your salad. The options are Chicken, Shrimp, or Tofu")
+        if toppings.lower() == "chicken":
+            print("https://youtube.com/shorts/kqi3OY42b2o?si=GJQq9Fus3V-ONS3N Caesar Salad with chicken coming up!")
+        elif toppings.lower() == "shrimp":
+            print("Not gonna lie I dont know how fresh our shrimp is. One casear salad with shrimp coming up!")
+        elif toppings.lower() == "tofu":
+            print("OMG are you vegetarian? I am vegetarian too! Lets go to vegetarian restaurants and post it on instagram so we can show everyone else that we are better than them! One caesar salad with tofu coming up!")
+        else:
+            print("Okay, so that is not an option")
+elif decision.lower() == "no":
+    print("wrong answer")
+else:
+    print("Should I call 911?")
